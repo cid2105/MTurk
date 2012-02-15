@@ -32,4 +32,4 @@ gem 'jquery-rails'
 # gem 'ruby-debug19', :require => 'ruby-debug'
 
 gem 'devise'
-gem 'rturk'
+#gem 'rturk'
