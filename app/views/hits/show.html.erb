@@ -1,0 +1,40 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Assignments:</b>
+  <%= @hit.assignments %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @hit.description %>
+</p>
+
+<p>
+  <b>Reward:</b>
+  <%= @hit.reward %>
+</p>
+
+<p>
+  <b>Min approval rate:</b>
+  <%= @hit.min_approval_rate %>
+</p>
+
+<p>
+  <b>Max approval rate:</b>
+  <%= @hit.max_approval_rate %>
+</p>
+
+<p>
+  <b>Url:</b>
+  <%= @hit.url %>
+</p>
+
+<p>
+  <b>Question:</b>
+  <%= @hit.question %>
+</p>
+
+
+<%= link_to 'Edit', edit_hit_path(@hit) %> |
+<%= link_to 'Back', hits_path %>

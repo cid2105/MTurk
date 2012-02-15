@@ -1,0 +1,19 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  assignments: 1
+  description: MyText
+  reward: 1.5
+  min_approval_rate: 1
+  max_approval_rate: 1
+  url: MyString
+  question: MyString
+
+two:
+  assignments: 1
+  description: MyText
+  reward: 1.5
+  min_approval_rate: 1
+  max_approval_rate: 1
+  url: MyString
+  question: MyString

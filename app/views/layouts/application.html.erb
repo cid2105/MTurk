@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>WordsEye</title>
+  <%= stylesheet_link_tag    "application", :media => "all" %>
+  <%= javascript_include_tag "application" %>
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+
+    <div class="navbar navbar-fixed-top">
+     	<%= render "shared/navigation" %>
+    </div>
+
+    <div class="container-fluid" style="margin-left:30px;">
+      <div class="row-fluid">
+        
+		<% if content_for?(:sidebar) %>
+			<%= yield(:sidebar) %>
+		<% else %>
+			<%= render "shared/sidebar"%>
+		<% end %>
+
+		
+        <div <% if signed_in? %> class="span9" style="margin-left:77px;"  <% else %> class="span11" <% end %>>
+          <div class="hero-unit">
+			<br/><br/>
+			<%= yield %>
+			<br/>
+          </div>
+          <div class="row-fluid">
+            <div class="span4">
+            <%= render "shared/bottom" unless signed_in? %>
+            </div><!--/span-->
+          </div><!--/row-->
+        </div><!--/span-->
+      </div><!--/row-->
+
+      <hr>
+
+      <footer>
+        <p style="text-align:center;">&copy; HelloWorld Inc, 2012</p>
+
+      </footer>
+
+    </div><!--/.fluid-container-->
+
+
+
+</body>
+</html>

@@ -1,0 +1,47 @@
+<%= form_for(@hit) do |f| %>
+  <% if @hit.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@hit.errors.count, "error") %> prohibited this hit from being saved:</h2>
+
+      <ul>
+      <% @hit.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :title %><br />
+    <%= f.text_field :title %>
+  </div>
+<br/>
+  <div class="field">
+    <%= f.label :assignments %><br />
+    <%= f.number_field :assignments %>
+  </div>
+<br/>
+  <div class="field">
+    <%= f.label :description %><br />
+    <%= f.text_area :description, :rows => 3 %>
+  </div>
+<br/>
+  <div class="field">
+    <%= f.label "Reward ($) " %><br />
+    <%= f.text_field :reward %>
+  </div>
+  <br/>
+  <div class="field">
+    <%= f.label :min_approval_rate %><br />
+    <%= f.number_field :min_approval_rate %>
+  </div>
+	<br/>
+  <div class="field">
+    <%= f.label :question %><br />
+    <%= f.text_field :question %>
+  </div>
+	<br/>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

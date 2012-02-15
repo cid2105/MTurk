@@ -1,0 +1,34 @@
+<div class="row-fluid">
+<table class="table table-striped table-bordered table-condensed">
+	<thead>
+	<tr>
+	  <th>Assignments</th>
+	    <th>Description</th>
+	    <th>Reward</th>
+	    <th>Min approval rate</th>
+	    <th>Max approval rate</th>
+	    <th>Url</th>
+	    <th>Question</th>
+	</tr>
+	</thead>
+	<tbody>
+	<% @hits.each do |hit| %>
+		  <tr>
+		    <td><%= hit.assignments %></td>
+		    <td><%= hit.description %></td>
+		    <td><%= hit.reward %></td>
+		    <td><%= hit.min_approval_rate %></td>
+		    <td><%= hit.max_approval_rate %></td>
+		    <td><%= hit.url %></td>
+		    <td><%= hit.question %></td>
+			</tr>
+	<% end %>
+	</tbody>
+</table>
+
+</div>
+
+
+
+<br />
+
