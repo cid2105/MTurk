@@ -18,5 +18,5 @@
 $(document).ready(function()
 {
 	$("[rel='tipsy']").tooltip();	
-	$('#nav_search').typeahead({source:"<%= raw Hit.pluck(:title) %>"});
+	$('#nav_search').typeahead({source:"<%= raw Hit.select(:title) %>"});
 });

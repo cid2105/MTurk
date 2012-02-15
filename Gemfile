@@ -32,7 +32,7 @@ group :test do
   # Pretty printed test output
   gem 'turn', :require => false
 end
-
+gem 'devise'
 gem "paperclip", :git => "git://github.com/thoughtbot/paperclip.git"
 gem 'will_paginate', "3.0.pre2"
 gem 'possessive'

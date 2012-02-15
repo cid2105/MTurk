@@ -1,5 +1,4 @@
-class Hit < ActiveRecord::Base
-  store :details
+class Hit < ActiveRecord::Base  
   before_create :init_hit
   
   def reviewable_hits
